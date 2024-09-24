@@ -20,7 +20,7 @@ function onCall({ message, event, args, api, threadID, messageID }) {
 
     const encodedPrompt = encodeURIComponent(args.join(' '));
 
-    await message.reply('im thinking sir 🤔..');
+    await message.reply('𝙿𝚛𝚘𝚌𝚎𝚜𝚜𝚒𝚗𝚐 𝚝𝚑𝚎 𝚋𝚎𝚜𝚝 𝚊𝚗𝚜𝚠𝚎𝚛!');
 
     const response = await axiosInstance.get(`https://priyansh-ai.onrender.com/gemini/ai?query=${encodedPrompt}`);
     const UPoL = response.data;
