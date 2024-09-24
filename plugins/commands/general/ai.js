@@ -24,7 +24,7 @@ const langData = {
 async function onCall({ message, args, getLang, data, userPermissions, prefix }) {
     if (args.length === 0) {
         // If no arguments (prompt) are provided, send a message back.
-        return message.send(getLang("message"));
+        return message.reply(getLang("message"));
     }
 
     const input = args.join(" "); // Combine arguments into a single prompt
@@ -40,9 +40,9 @@ async function onCall({ message, args, getLang, data, userPermissions, prefix })
         });
 
         if (data && data.response) {
-            message.send(data.response); // Send AI's response to the user
+            message.reply(data.response); // Send AI's response to the user
         } else {
-            message.send("Sorry, I couldn't understand the response from the AI.");
+            message.reply("Sorry, I couldn't understand the response from the AI.");
         }
     } catch (error) {
         message.send("An error occurred while trying to reach the AI. Please try again later.");
