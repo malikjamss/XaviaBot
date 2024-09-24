@@ -6,7 +6,7 @@ function onCall({ message, event, args, api, threadID, messageID }) {
 
     const upol = event.body.substring(ahprefix.length).trim();
     if (!upol) {
-      await message.reply('IT4CHI H3R3 ♥');
+      await message.reply('𝙷𝚘𝚠 𝚖𝚊𝚢 𝙸 𝚑𝚎𝚕𝚙 𝚢𝚘𝚞?');
       return;
     }
 
