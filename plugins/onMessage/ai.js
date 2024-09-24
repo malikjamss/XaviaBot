@@ -1,3 +1,10 @@
+const axios = require('axios');
+const UPoLPrefix = [
+  'ai'
+];
+
+const axiosInstance = axios.create();
+
 function onCall({ message, event, args, api, threadID, messageID }) {
     const ahprefix = UPoLPrefix.find((p) => event.body && event.body.toLowerCase().startsWith(p));
     if (!ahprefix) {
